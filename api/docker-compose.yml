@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:15.1
+    container_name: postgresql-sortelancada
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: sortelancada
+      POSTGRES_USER: sortelancada
+      POSTGRES_PASSWORD: 123@Mudar
+    ports:
+      - "5436:5432"
+    volumes:
+      - pgdata_sortelancada:/var/lib/postgresql/data
+
+volumes:
+  pgdata_sortelancada:
