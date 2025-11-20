@@ -7,10 +7,10 @@ services:
     restart: unless-stopped
     environment:
       POSTGRES_DB: sortelancada
-      POSTGRES_USER: sortelancada
-      POSTGRES_PASSWORD: 123@Mudar
+      POSTGRES_USER:
+      POSTGRES_PASSWORD:
     ports:
-      - "5436:5432"
+      - '5436:5432'
     volumes:
       - pgdata_sortelancada:/var/lib/postgresql/data
 
